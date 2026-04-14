@@ -250,7 +250,7 @@
     border-radius: 8px 8px 0 0;
 }
 
-::deep .pd-tabstrip .k-tabstrip-item:hover:not(.k-active .k-link) {
+::deep .pd-tabstrip .k-tabstrip-item:not(.k-active):hover {
     color: var(--color-text-primary);
     background: rgba(37, 99, 235, 0.06);
 }
@@ -421,21 +421,6 @@
 }
 
 /* Field typography: quieter labels, stronger values, better multiline readability. */
-::deep .pd-mdm-field-grid .pd-data-field {
-    display: grid;
-    grid-template-columns: minmax(170px, 0.9fr) minmax(0, 1.1fr);
-    column-gap: 1rem;
-    row-gap: 0.2rem;
-    align-items: start;
-}
-
-@media (max-width: 900px) {
-    ::deep .pd-mdm-field-grid .pd-data-field {
-        grid-template-columns: 1fr;
-        row-gap: 0.35rem;
-    }
-}
-
 ::deep .pd-mdm-field-grid .pd-data-field__lbl {
     color: var(--color-text-secondary);
     font-weight: var(--font-weight-medium);
@@ -448,13 +433,10 @@
     line-height: 1.45;
 }
 
+/* Long text blocks: breathing room so dense sections feel less exhausting. */
 ::deep .pd-mdm-field-grid .pd-data-field__val--multiline {
     white-space: pre-wrap;
     word-break: break-word;
-}
-
-/* Long text blocks: add breathing room so dense sections feel less exhausting. */
-::deep .pd-mdm-field-grid .pd-data-field__val--multiline {
     line-height: 1.55;
 }
 
